@@ -1,123 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crie seu Pequeno NPC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-                <div class="scene">
-                <div class="card-npc">
-                <div class="neon-orb orb-top-left"></div>
-                <div class="neon-orb orb-bottom-right"></div>
+ <div class="scene">
+    <div class="card-npc">
+      <div class="neon-orb orb-top-left"></div>
+      <div class="neon-orb orb-bottom-right"></div>
 
-                <div class="title-wrap">
-                    <h1 class="main-title">Create Your Little NPC</h1>
-                    <p class="subtitle">Every world needs a little magic... yours starts here ♡</p>
-                </div>
+      <div class="title-wrap">
+        <h1 class="main-title">Crie seu Pequeno NPC</h1>
+        <p class="subtitle">Todo mundo precisa de um pouco de magia... a sua começa aqui ♡</p>
+      </div>
 
-                <div class="row g-4 align-items-start">
-                    <div class="col-md-7 left-area">
-                    <form id="signupForm">
-                        <div class="mb-3">
-                        <label for="name" class="form-label">Your Name ✿</label>
-                        <input type="text" class="form-control npc-input" id="name" />
-                        </div>
-
-                        <div class="mb-3">
-                        <label for="email" class="form-label">Magic Mail ✉</label>
-                        <input type="email" class="form-control npc-input" id="email" />
-                        </div>
-
-                        <div class="mb-4">
-                        <label for="password" class="form-label">Secret Spell 🔒</label>
-                        <input type="password" class="form-control npc-input" id="password" />
-                        </div>
-
-                        <button type="submit" class="btn-world">Enter the World</button>
-
-                        <p class="bottom-link mb-0">
-                        Already have a chronicled path?
-                        <a href="#">Awaken here</a>
-                        </p>
-                    </form>
-                    </div>
-
-                    <div class="col-md-5 right-area ps-md-4">
-                    <div class="essence-title">Choose Your Essence</div>
-
-                    <div class="essence-grid">
-                        <div class="essence-item">
-                        <button type="button" class="essence-btn active">
-                            <i class="bi bi-stars"></i>
-                        </button>
-                        <span class="essence-label">Dreamer</span>
-                        </div>
-
-                        <div class="essence-item">
-                        <button type="button" class="essence-btn">
-                            <i class="bi bi-palette-fill"></i>
-                        </button>
-                        <span class="essence-label">Creator</span>
-                        </div>
-
-                        <div class="essence-item">
-                        <button type="button" class="essence-btn">
-                            <i class="bi bi-moon-stars-fill"></i>
-                        </button>
-                        <span class="essence-label">Star</span>
-                        </div>
-
-                        <div class="essence-item">
-                        <button type="button" class="essence-btn">
-                            <i class="bi bi-brush-fill"></i>
-                        </button>
-                        <span class="essence-label">Artist</span>
-                        </div>
-                    </div>
-
-                    <div class="bar-title">Mana</div>
-                    <div class="custom-bar mana-bar"></div>
-
-                    <div class="bar-title mt-4">HP</div>
-                    <div class="custom-bar hp-bar"></div>
-                    </div>
-                </div>
-                </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-md-7 left-area">
+          <form id="signupForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Seu Nome ✿</label>
+              <input type="text" class="form-control npc-input" id="name" placeholder="Digite seu nome" required>
             </div>
 
-            <div class="success-popup" id="successPopup">
-                <div class="success-box">
-                <div class="success-icon">
-                    <i class="bi bi-stars"></i>
-                </div>
-                <h2 class="success-title">Welcome to the world ✨</h2>
-                <p class="success-text">
-                    Your little NPC has been created successfully.
-                </p>
-                <button class="btn-close-popup" id="closePopup">Continue</button>
-                </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correio Mágico ✉</label>
+              <input type="email" class="form-control npc-input" id="email" placeholder="Digite seu e-mail">
             </div>
 
-          
+            <div class="mb-4">
+              <label for="password" class="form-label">Feitiço Secreto 🔒</label>
+              <input type="password" class="form-control npc-input" id="password" placeholder="Crie sua senha" required>
+            </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
-   <script>
+            <button type="submit" class="btn-world">Entrar no Mundo</button>
+
+            <p class="bottom-link mb-0">
+              Já tem um caminho registrado?
+              <a href="#">Desperte aqui</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="col-md-5 right-area ps-md-4">
+          <div class="essence-title">Escolha sua Essência</div>
+
+          <div class="essence-grid">
+            <div
+              class="essence-item active"
+              data-mana="72%"
+              data-hp="40%"
+              data-color="linear-gradient(90deg, #d79ad8, #be7ec7)"
+              data-button="linear-gradient(90deg, #e2b4e2 0%, #cf7bcf 100%)"
+              data-orb-core="rgba(230, 184, 229, 0.9)"
+              data-orb-mid="rgba(230, 184, 229, 0.38)"
+              data-ring="rgba(207, 123, 207, 0.28)"
+              data-essencebg="rgba(255, 255, 255, 0.94)"
+              data-icon="#a35aa4"
+            >
+              <button type="button" class="essence-btn">
+                <i class="bi bi-stars"></i>
+              </button>
+              <div class="essence-copy">
+                <span class="essence-label">Sonhadora</span>
+                <span class="essence-desc">leve, doce e intuitiva</span>
+              </div>
+            </div>
+
+            <div
+              class="essence-item"
+              data-mana="85%"
+              data-hp="58%"
+              data-color="linear-gradient(90deg, #f0b7c8, #d989a2)"
+              data-button="linear-gradient(90deg, #f3c4d3 0%, #df96b2 100%)"
+              data-orb-core="rgba(244, 190, 210, 0.92)"
+              data-orb-mid="rgba(244, 190, 210, 0.34)"
+              data-ring="rgba(223, 150, 178, 0.30)"
+              data-essencebg="rgba(255, 250, 252, 0.95)"
+              data-icon="#cb6f95"
+            >
+              <button type="button" class="essence-btn">
+                <i class="bi bi-palette-fill"></i>
+              </button>
+              <div class="essence-copy">
+                <span class="essence-label">Criadora</span>
+                <span class="essence-desc">criativa, sensível e viva</span>
+              </div>
+            </div>
+
+            <div
+              class="essence-item"
+              data-mana="92%"
+              data-hp="32%"
+              data-color="linear-gradient(90deg, #c7b6f8, #9f8df1)"
+              data-button="linear-gradient(90deg, #d6c9fb 0%, #a998f4 100%)"
+              data-orb-core="rgba(206, 194, 252, 0.92)"
+              data-orb-mid="rgba(206, 194, 252, 0.34)"
+              data-ring="rgba(159, 141, 241, 0.28)"
+              data-essencebg="rgba(251, 250, 255, 0.95)"
+              data-icon="#8c78ea"
+            >
+              <button type="button" class="essence-btn">
+                <i class="bi bi-moon-stars-fill"></i>
+              </button>
+              <div class="essence-copy">
+                <span class="essence-label">Estelar</span>
+                <span class="essence-desc">mística, calma e rara</span>
+              </div>
+            </div>
+
+            <div
+              class="essence-item"
+              data-mana="60%"
+              data-hp="78%"
+              data-color="linear-gradient(90deg, #bfe4d4, #8ac7ad)"
+              data-button="linear-gradient(90deg, #cfeee1 0%, #97d0b7 100%)"
+              data-orb-core="rgba(189, 232, 214, 0.94)"
+              data-orb-mid="rgba(189, 232, 214, 0.34)"
+              data-ring="rgba(138, 199, 173, 0.30)"
+              data-essencebg="rgba(249, 255, 252, 0.95)"
+              data-icon="#69ae90"
+            >
+              <button type="button" class="essence-btn">
+                <i class="bi bi-brush-fill"></i>
+              </button>
+              <div class="essence-copy">
+                <span class="essence-label">Artista</span>
+                <span class="essence-desc">forte, livre e expressiva</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bar-title">Mana</div>
+          <div class="custom-bar mana-bar"></div>
+
+          <div class="bar-title mt-4">Energia</div>
+          <div class="custom-bar hp-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="success-popup" id="successPopup">
+    <div class="success-box">
+      <div class="success-icon">
+        <i class="bi bi-stars"></i>
+      </div>
+      <h2 class="success-title">Bem-vinda ao mundo ✨</h2>
+      <p class="success-text">
+        Seu pequeno NPC foi criado com sucesso.
+      </p>
+      <button class="btn-close-popup" id="closePopup">Continuar</button>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
     const form = document.getElementById("signupForm");
     const popup = document.getElementById("successPopup");
     const closePopup = document.getElementById("closePopup");
-    const essenceButtons = document.querySelectorAll(".essence-btn");
+    const essenceItems = document.querySelectorAll(".essence-item");
+    const root = document.documentElement;
 
-    essenceButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        essenceButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
+    function updateTheme(item) {
+      root.style.setProperty("--mana-width", item.dataset.mana);
+      root.style.setProperty("--hp-width", item.dataset.hp);
+      root.style.setProperty("--bar-color", item.dataset.color);
+      root.style.setProperty("--button-gradient", item.dataset.button);
+      root.style.setProperty("--orb-core", item.dataset.orbCore);
+      root.style.setProperty("--orb-mid", item.dataset.orbMid);
+      root.style.setProperty("--essence-ring", item.dataset.ring);
+      root.style.setProperty("--essence-bg", item.dataset.essencebg);
+      root.style.setProperty("--essence-icon", item.dataset.icon);
+    }
+
+    essenceItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        essenceItems.forEach((essence) => essence.classList.remove("active"));
+        item.classList.add("active");
+        updateTheme(item);
       });
     });
+
+    const activeEssence = document.querySelector(".essence-item.active");
+    if (activeEssence) {
+      updateTheme(activeEssence);
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
